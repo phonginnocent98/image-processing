@@ -41,11 +41,11 @@ x2 = x1 + data[:,2][max_index]
 y2 = y1 + data[:,3][max_index]  
 a = data[:,4][max_index]       
 
-org = cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0),3)
-org = cv2.drawMarker(result2, (b[0], b[1]), (0, 0, 255),markerType=cv2.MARKER_SQUARE, thickness=10)  
-cv2.imshow('frame',result1)
-cv2.imshow('redphong',org)
-cv2.imwrite('reddetectedphong1.jpg',result1)
+org1 = cv2.rectangle(red, (x1, y1), (x2, y2), (0, 255, 0),3)
+org = cv2.drawMarker(red, center, (0, 0, 255),markerType=cv2.MARKER_SQUARE, thickness=10)  
+cv2.imshow('frame1',org1)
+cv2.imshow('redphong1',org)
+cv2.imwrite('reddetectedphong1.jpg',org)
 cv2.waitKey(0)
 
 cv2.destroyAllWindows()
